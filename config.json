@@ -1,0 +1,22 @@
+{
+  "realms": [
+    {
+      "realm": "home",
+      "location": "src/home"
+    }
+  ],
+  "urls": [
+    {
+      "label": "Home",
+      "path": "/"
+    },
+    {
+      "label": "Products",
+      "path": "/products"
+    },
+    {
+      "label": "Profile",
+      "path": "/profile"
+    }
+  ]
+}
