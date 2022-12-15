@@ -1,14 +1,13 @@
 import { Base } from '../base';
+import type * as CSS from 'csstype';
 
-export interface IKeeTextStyles {
+export interface IKeeTextStyles extends CSS.Properties {
   color?: string;
-  fontSize?: number;
-  fontWeight?: number;
 }
 
 export interface IKeeTextProps {
   text: string;
-  type?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
+  type?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
   styles?: IKeeTextStyles;
 }
 

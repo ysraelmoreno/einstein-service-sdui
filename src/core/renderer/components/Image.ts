@@ -1,10 +1,8 @@
 import { Base } from '../base';
+import type * as CSS from 'csstype';
 
-export interface ImageProps {
+export interface ImageProps extends CSS.Properties {
   url: string;
-  maxWidth?: number | string;
-  objectFit?: 'cover' | 'contain';
-  aspectRatio?: string;
 }
 
 export class Image extends Base {

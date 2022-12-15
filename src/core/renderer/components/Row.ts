@@ -1,23 +1,9 @@
 import { Base } from '../base';
-import { NumberOrString } from '../interfaces/common';
 import { KeeInterface } from '../interfaces/KeeInterface';
+import type * as CSS from 'csstype';
 
-interface IRowProps {
-  alignItems?: 'center' | 'end' | 'start' | 'stretch';
-  justifyContent?:
-    | 'start'
-    | 'center'
-    | 'space-between'
-    | 'space-around'
-    | 'space-evenly';
-  gap?: NumberOrString;
+interface IRowProps extends CSS.Properties {
   children: KeeInterface[];
-  flex?: number;
-  margin?: string;
-  marginTop?: string;
-  marginBottom?: string;
-  marginLeft?: string;
-  marginRight?: string;
 }
 
 export class Row extends Base {
