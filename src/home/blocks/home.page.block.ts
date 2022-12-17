@@ -26,13 +26,16 @@ export class HomeBlock extends BlockPageAbstractRenderer {
         padding: '10px',
         marginBottom: '20px',
         alignItems: 'center',
-        justifyContent: 'center',
         children: [
-          new KeeText({
-            text: 'Test',
-            styles: {
-              color: 'white',
-            },
+          new Container({
+            children: [
+              new KeeText({
+                text: 'See our promotions for Christmas!',
+                styles: {
+                  color: 'white',
+                },
+              }),
+            ],
           }),
         ],
       }),
