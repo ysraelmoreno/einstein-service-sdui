@@ -1,18 +1,19 @@
 import { Module } from '@nestjs/common';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
+import { CartModule } from './modules/cart/cart.module';
 import { KeeCore } from './core/KeeCore.module';
-import { HomeModule } from './home/home.module';
-import { ProductsModule } from './products/products.module';
+import { HomeModule } from './modules/home/home.module';
+import { ProductsModule } from './modules/products/products.module';
 
 @Module({
   imports: [
     KeeCore.forRoot({
-      imports: [HomeModule, ProductsModule],
+      imports: [HomeModule, ProductsModule, CartModule],
     }),
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'client'),
-      exclude: ['/api*'],
+      exclude: ['/api*', 'http://localhost:8080*'],
     }),
   ],
 })

@@ -7,9 +7,9 @@ import { ProductsController } from './controllers/products.controller';
   imports: [
     KeeCore.forRoot({
       realm: ProductsModule,
-      controllers: [ProductsController],
       providers: [ProductsPageBlock],
       exports: [ProductsPageBlock],
+      controllers: [ProductsController],
     }),
   ],
 })

@@ -2,21 +2,30 @@
   "realms": [
     {
       "realm": "home",
-      "location": "src/home"
+      "module": "HomeModule",
+      "location": "home.module"
     }
   ],
   "urls": [
     {
       "label": "Home",
-      "path": "/"
+      "path": "/",
+      "private": false
     },
     {
       "label": "Products",
-      "path": "/products"
+      "path": "/products",
+      "private": false
     },
     {
       "label": "Profile",
-      "path": "/profile"
+      "path": "/profile",
+      "private": true,
+      "unloggedMenu": {
+        "iconName": "user",
+        "label": "Login",
+        "path": "/login"
+      }
     }
   ]
 }

@@ -25,9 +25,11 @@ export class KeeCore {
       const realms = Reflect.getMetadata(Kee_IMPORT_BLOCKS, KeeCore);
       Reflect.defineMetadata(KEE_REALM, providers.realm, KeeCore);
 
+      const exportedData = providers.exports;
+
       Reflect.defineMetadata(
         Kee_IMPORT_BLOCKS,
-        [...realms, ...providers.exports],
+        realms.concat(exportedData),
         KeeCore,
       );
     }

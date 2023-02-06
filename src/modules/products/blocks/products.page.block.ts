@@ -6,7 +6,7 @@ import { ResponseInterface } from 'src/core/renderer/services/block.service';
 
 @KeeBlock('products.page')
 export class ProductsPageBlock extends BlockPageAbstractRenderer {
-  async renderObject(): Promise<ResponseInterface | KeeInterface[]> {
+  async renderObject() {
     return [
       new KeeText({
         text: 'Products',

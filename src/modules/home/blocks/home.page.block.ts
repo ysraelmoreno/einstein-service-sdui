@@ -12,14 +12,19 @@ export class HomeBlock extends BlockPageAbstractRenderer {
     super();
   }
 
-  async renderObject(): Promise<KeeInterface[]> {
-    return this.render();
+  async renderObject(object: any) {
+    this.elements = await this.renderContents();
+
+    return await this.render();
   }
 
-  async render(): Promise<KeeInterface[]> {
+  async renderContents(): Promise<KeeInterface[]> {
     const categoriesSlider = await this.blockService.render(
       'categories.slider.block',
     );
+
+    const categories = await this.blockService.render('categories.block');
+
     return [
       new Row({
         backgroundColor: '#1c1c1c',
@@ -46,7 +51,7 @@ export class HomeBlock extends BlockPageAbstractRenderer {
             alignItems: 'start',
             justifyContent: 'space-between',
             marginTop: '10px',
-            children: [...(categoriesSlider as KeeInterface[])],
+            children: categoriesSlider as KeeInterface[],
           }),
         ],
       }),
@@ -56,7 +61,7 @@ export class HomeBlock extends BlockPageAbstractRenderer {
         marginBottom: '20px',
         children: [
           new KeeText({
-            text: 'Best sellers',
+            text: 'Categories',
             type: 'h1',
             styles: {
               textAlign: 'center',
@@ -64,6 +69,8 @@ export class HomeBlock extends BlockPageAbstractRenderer {
           }),
         ],
       }),
+
+      ...(categories as KeeInterface[]),
     ];
   }
 }

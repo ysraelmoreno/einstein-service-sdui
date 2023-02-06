@@ -24,7 +24,9 @@
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
+    "@nestjs/platform-socket.io": "^9.2.1",
     "@nestjs/serve-static": "^3.0.0",
+    "@nestjs/websockets": "^9.2.1",
     "axios": "^1.2.0",
     "csstype": "^3.1.1",
     "mongodb": "^4.10.0",
@@ -33,6 +35,8 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
+    "socket.io": "^4.5.4",
+    "socket.io-client": "^4.5.4",
     "typeorm": "^0.3.10"
   },
   "devDependencies": {

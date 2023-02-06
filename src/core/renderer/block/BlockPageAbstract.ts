@@ -1,19 +1,22 @@
 import { Menu, MenuItem } from '../components/Attacker/Menu';
 import { KeeInterface } from '../interfaces/KeeInterface';
-import { ResponseInterface } from '../services/block.service';
 import { AbstractBlockRenderer } from './Abstract';
 import * as path from 'path';
 import * as fs from 'fs';
+import { Render } from '../services/block.service';
 
 export class BlockPageAbstractRenderer extends AbstractBlockRenderer {
   public menu: KeeInterface;
   public items: MenuItem[] = [
     {
       label: 'Home',
-      url: '/',
+      path: '/',
+      private: false,
     },
   ];
+
   public logo = 'http://localhost:3000/logo.png';
+  public elements: Render;
 
   constructor() {
     super();
@@ -37,7 +40,7 @@ export class BlockPageAbstractRenderer extends AbstractBlockRenderer {
     });
   }
 
-  async renderObject(): Promise<ResponseInterface | KeeInterface[]> {
-    return {} as ResponseInterface;
+  async render() {
+    return this.elements;
   }
 }

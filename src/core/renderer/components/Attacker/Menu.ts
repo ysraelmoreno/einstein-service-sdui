@@ -1,8 +1,14 @@
 import { Base } from '../../base';
 
 export interface MenuItem {
-  url: string;
-  label: string;
+  path: string;
+  label?: string;
+  private?: boolean;
+  iconName?: string;
+  unloggedMenu?: {
+    path: string;
+    label?: string;
+  };
 }
 
 export interface MenuProps {
