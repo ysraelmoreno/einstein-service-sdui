@@ -5,6 +5,7 @@ import { Row } from 'src/core/renderer/components/Row';
 import { Container } from 'src/core/renderer/components/Container';
 import { BlockService } from 'src/core/renderer/services/block.service';
 import { KeeText } from 'src/core/renderer/components/Text';
+import { GenericComponent } from 'src/core/renderer/components/GenericComponent';
 
 @KeeBlock('home.page')
 export class HomeBlock extends BlockPageAbstractRenderer {

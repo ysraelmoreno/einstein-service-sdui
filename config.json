@@ -6,6 +6,12 @@
       "location": "home.module"
     }
   ],
+  "storages": [
+    {
+      "dealer": "user",
+      "name": "@mart:user"
+    }
+  ],
   "urls": [
     {
       "label": "Home",

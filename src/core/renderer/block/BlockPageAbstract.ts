@@ -15,7 +15,7 @@ export class BlockPageAbstractRenderer extends AbstractBlockRenderer {
     },
   ];
 
-  public logo = 'http://localhost:3000/logo.png';
+  public logo = 'http://localhost:4000/static/logo.png';
   public elements: Render;
 
   constructor() {
@@ -29,7 +29,7 @@ export class BlockPageAbstractRenderer extends AbstractBlockRenderer {
 
     this.menu = new Menu({
       items: urls,
-      logo: 'http://localhost:3000/logo.png',
+      logo: 'http://localhost:4000/static/logo.png',
     });
   }
 

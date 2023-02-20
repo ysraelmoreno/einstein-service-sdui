@@ -15,11 +15,9 @@ export class CategoriesSliderBlock extends AbstractBlockRenderer {
   }
 
   async renderObject(): Promise<KeeInterface[]> {
-    const categories = await (
-      await this.productsService.getCategories()
-    ).slice(0, 3);
+    const categories = await this.productsService.getCategories();
 
-    return categories.map(
+    return categories.slice(0, 3).map(
       (category) =>
         new Column({
           backgroundColor: '#f1f1f1',

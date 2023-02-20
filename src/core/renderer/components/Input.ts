@@ -1,15 +1,12 @@
+import type * as CSS from 'csstype';
 import { Base } from '../base';
 
-export interface InputStyles {
-  color?: string;
-  fontSize?: number;
-  fontWeight?: number;
-}
-
-export interface InputProps {
+export interface InputProps extends CSS.Properties {
   placeholder?: string;
   label?: string;
-  type?: 'number' | 'text' | 'email' | 'date';
+  name?: string;
+  id?: string;
+  type?: 'number' | 'text' | 'email' | 'date' | 'password';
 }
 
 export class Input extends Base {
